@@ -61,6 +61,53 @@
     color: var(--header__title-color, #ff8dcb);
   }
 
+  .decorated-zone::before {
+    border-inline-end: 1px solid var(--text-color, #353430);
+    border-block-start: 1px solid var(--text-color, #353430);
+  }
+
+  .decorated-zone::after {
+    border-inline-start: 1px solid var(--text-color, #353430);
+    border-block-end: 1px solid var(--text-color, #353430);
+  }
+}
+
+.theme-light .page {
+  /* Вам также нужно будет написать ряд подобных селекторов */
+
+  .header-rec {
+    display: none;
+  }
+
+  .title-decor {
+    color: var(--text-color, #353430);
+  }
+
+  .header__theme-menu-button {
+    color: var(--text-color, #353430);
+  }
+
+  .header__theme-menu-button:hover {
+    border-color: var(--button-border-hover, #35343066);
+  }
+
+  .header__theme-menu-button[disabled='true'] {
+    border-color: var(--text-color, #353430);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-end-color: var(--text-color, #353430);
+  }
+
+  .section__title {
+    color: var(--text-color, #353430);
+  }
+
+  .header__title,
+  .footer-title {
+    color: var(--header__title-color, #ff8dcb);
+  }
+
   .theme-light .decorated-zone::before {
     border-inline-end: 1px solid var(--text-color, #353430);
     border-block-start: 1px solid var(--text-color, #353430);
@@ -70,51 +117,4 @@
     border-inline-start: 1px solid var(--text-color, #353430);
     border-block-end: 1px solid var(--text-color, #353430);
   }
-}
-
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
-
-.theme-light .header-rec {
-  display: none;
-}
-
-.theme-light .title-decor {
-  color: var(--text-color, #353430);
-}
-
-.theme-light .header__theme-menu-button {
-  color: var(--text-color, #353430);
-}
-
-.theme-light .header__theme-menu-button:hover {
-  border-color: var(--button-border-hover, #35343066);
-}
-
-.theme-light .header__theme-menu-button[disabled='true'] {
-  border-color: var(--text-color, #353430);
-}
-
-.theme-light .header__theme-menu-button:focus-visible {
-  border-block-end-color: var(--text-color, #353430);
-}
-
-.theme-light .section__title {
-  color: var(--text-color, #353430);
-}
-
-.theme-light .header__title,
-.theme-light .footer-title {
-  color: var(--header__title-color, #ff8dcb);
-}
-
-.theme-light .decorated-zone::before {
-  border-inline-end: 1px solid var(--text-color, #353430);
-  border-block-start: 1px solid var(--text-color, #353430);
-}
-
-.theme-light .decorated-zone::after {
-  border-inline-start: 1px solid var(--text-color, #353430);
-  border-block-end: 1px solid var(--text-color, #353430);
 }
