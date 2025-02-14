@@ -9,10 +9,11 @@
   --bg-image: url(../images/cover-image-dark.png);
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
-  --heading__title-color: #db00ff;
+  --heading-title-color: #db00ff;
   --regular-font-size: 18px;
   --light: 400;
   --button-border-hover: #ff007066;
+  --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 
   --space-sm: 10px;
   --space-md: 20px;

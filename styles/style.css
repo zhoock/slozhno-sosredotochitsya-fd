@@ -18,19 +18,18 @@
   justify-items: end;
   align-items: center;
   min-block-size: 668px;
-  block-size: 100vh;
+  /* block-size: 100vh; // теперь соответствует макету */
 }
 
 .header-rec {
   position: absolute;
   color: var(--accent-color, #ff0070);
-  font-family: var(--main-font, 'IBM Plex mono');
+  font-family: var(--main-font, 'sans-serif');
   font-size: var(--regular-font-size, 18px);
   line-height: 1.4;
   text-transform: uppercase;
   inset-block-start: var(--space-sm, 10px);
   inset-inline-end: var(--space-md, 20px);
-  block-size: 26px;
   inline-size: 52px;
 }
 
@@ -56,7 +55,7 @@
   padding-inline: 13px;
   padding-block-end: 5px;
   color: var(--accent-color, #ff0070);
-  font-family: var(--main-font);
+  font-family: var(--main-font, 'sans-serif');
   font-size: var(--regular-font-size, 18px);
   line-height: 1;
   text-transform: lowercase;
@@ -70,7 +69,7 @@
 }
 
 .header__theme-menu-button[disabled='true'] {
-  border-color: var(--accent-color, #ff0070);
+  border-color: currentColor;
 }
 
 .header__theme-menu-button_active {
@@ -82,13 +81,13 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end-color: var(--accent-color, #ff0070);
+  border-block-end-color: currentColor;
 }
 
 .header__title {
   justify-self: start;
-  color: var(--heading__title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--heading-title-color);
+  font-size: var(--logo-size);
   line-height: 0.825;
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
@@ -96,8 +95,8 @@
 
 /* main */
 .content.content-section {
-  background-color: var(--bg-color, #000028);
-  padding-block-end: var(--space-lg, 30px);
+  /* background-color: var(--bg-color, #000028); // не нужен, так не нужен... */
+  padding-block-end: calc(var(--space-lg, 30px) + var(--space-sm, 10px));
 }
 
 .section {
@@ -163,14 +162,14 @@
   position: relative;
   display: grid;
   place-items: center;
-  background-color: var(--bg-color);
-  block-size: 100vh;
+  /* background-color: var(--bg-color, #000028); // не нужен, так не нужен... */
+  /* block-size: 100vh; // теперь соответствует макету */
   min-block-size: 668px;
 }
 
 .footer-title {
-  color: var(--heading__title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--heading-title-color);
+  font-size: var(--logo-size);
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }
 /* / footer */
@@ -226,6 +225,10 @@
 /* / общие стили */
 
 @media (width >= 768px) {
+  :root {
+    --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
   .header,
   .footer {
     min-block-size: 1024px;
@@ -254,7 +257,7 @@
 
   .header__title,
   .footer-title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: var(--logo-size);
   }
 
   .header__paragraph {
