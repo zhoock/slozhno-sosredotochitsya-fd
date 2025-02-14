@@ -52,7 +52,6 @@
 }
 
 .header__theme-menu-button {
-  border: initial;
   border: 1px solid transparent;
   padding-inline: 13px;
   padding-block-end: 5px;
