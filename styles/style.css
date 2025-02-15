@@ -18,7 +18,7 @@
   justify-items: end;
   align-items: center;
   min-block-size: 668px;
-  /* block-size: 100vh; // теперь соответствует макету */
+  /* block-size: 100vh; */
 }
 
 .header-rec {
@@ -95,7 +95,7 @@
 
 /* main */
 .content.content-section {
-  /* background-color: var(--bg-color, #000028); // не нужен, так не нужен... */
+  /* background-color: var(--bg-color, #000028); */
   padding-block-end: calc(var(--space-lg, 30px) + var(--space-sm, 10px));
 }
 
@@ -162,8 +162,8 @@
   position: relative;
   display: grid;
   place-items: center;
-  /* background-color: var(--bg-color, #000028); // не нужен, так не нужен... */
-  /* block-size: 100vh; // теперь соответствует макету */
+  /* background-color: var(--bg-color, #000028); */
+  /* block-size: 100vh; */
   min-block-size: 668px;
 }
 
@@ -218,7 +218,7 @@
 }
 
 .title-decor {
-  color: var(--bg-color);
+  color: var(--bg-color, #000028);
   font-weight: 700;
   background-color: var(--accent-color, #ff0070);
 }
