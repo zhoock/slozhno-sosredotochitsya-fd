@@ -20,18 +20,4 @@
   .header-rec {
     display: block;
   }
-
-  .title-decor {
-    color: var(--title-decor, #000028);
-  }
-
-  .header__theme-menu-button,
-  .section__title {
-    color: var(--accent-color, #ff0070);
-  }
-
-  .decorated-zone::before,
-  .decorated-zone::after {
-    border-color: var(--accent-color, #ff0070);
-  }
 }
