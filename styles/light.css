@@ -35,7 +35,7 @@
   }
 
   .title-decor {
-    color: var(--f-color, #353430);
+    color: var(--title-decor, #353430);
   }
 
   .header__theme-menu-button {
