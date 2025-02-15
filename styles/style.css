@@ -16,7 +16,7 @@
   grid-template-rows: 1fr min-content 1fr;
   justify-items: end;
   align-items: center;
-  max-block-size: 668px;
+  min-block-size: 668px;
   block-size: 100vh;
 }
 
@@ -94,7 +94,6 @@
 
 /* main */
 .content.content-section {
-  /* background-color: var(--bg-color, #000028); */
   padding-block-end: calc(var(--space-lg, 30px) + var(--space-sm, 10px));
 }
 
@@ -161,9 +160,8 @@
   position: relative;
   display: grid;
   place-items: center;
-  /* background-color: var(--bg-color, #000028); */
   block-size: 100vh;
-  max-block-size: 668px;
+  min-block-size: 668px;
 }
 
 .footer-title {
@@ -231,7 +229,6 @@
   .header,
   .footer {
     min-block-size: 1024px;
-    max-block-size: initial;
   }
 
   .decorated-zone::before {
@@ -329,8 +326,7 @@
 @media (width >= 1024px) {
   .header,
   .footer {
-    max-block-size: 768px;
-    min-block-size: initial;
+    min-block-size: 768px;
   }
 
   .header__theme-menu {

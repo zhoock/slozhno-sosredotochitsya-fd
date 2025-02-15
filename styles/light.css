@@ -33,45 +33,6 @@
   .header-rec {
     display: none;
   }
-
-  .title-decor {
-    color: var(--title-decor, #353430);
-  }
-
-  .header__theme-menu-button {
-    color: var(--f-color, #353430);
-  }
-
-  .header__theme-menu-button:hover {
-    border-color: var(--button-border-hover, #35343066);
-  }
-
-  .header__theme-menu-button[disabled='true'] {
-    border-color: currentColor;
-  }
-
-  .header__theme-menu-button:focus-visible {
-    border-block-end-color: currentColor;
-  }
-
-  .section__title {
-    color: var(--f-color, #353430);
-  }
-
-  .header__title,
-  .footer-title {
-    color: var(--heading-title-color, #ff8dcb);
-  }
-
-  .decorated-zone::before {
-    border-inline-end: 1px solid var(--f-color, #353430);
-    border-block-start: 1px solid var(--f-color, #353430);
-  }
-
-  .decorated-zone::after {
-    border-inline-start: 1px solid var(--f-color, #353430);
-    border-block-end: 1px solid var(--f-color, #353430);
-  }
 }
 
 .theme-light .page {
