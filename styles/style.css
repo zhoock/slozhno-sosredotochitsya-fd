@@ -1,11 +1,10 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   color: var(--text-color, #f1b2ce);
   background-color: var(--bg-color, #000028);
   background-image: var(--bg-image);
-  background-position: left bottom;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -17,8 +16,8 @@
   grid-template-rows: 1fr min-content 1fr;
   justify-items: end;
   align-items: center;
-  min-block-size: 668px;
-  /* block-size: 100vh; */
+  max-block-size: 668px;
+  block-size: 100vh;
 }
 
 .header-rec {
@@ -54,7 +53,7 @@
   border: 1px solid transparent;
   padding-inline: 13px;
   padding-block-end: 5px;
-  color: var(--accent-color, #ff0070);
+  color: var(--f-color, #ff0070);
   font-family: var(--main-font, 'sans-serif');
   font-size: var(--regular-font-size, 18px);
   line-height: 1;
@@ -106,7 +105,7 @@
 }
 
 .section__title {
-  color: var(--accent-color, #ff0070);
+  color: var(--f-color, #ff0070);
 }
 
 .section__paragraph {
@@ -163,8 +162,8 @@
   display: grid;
   place-items: center;
   /* background-color: var(--bg-color, #000028); */
-  /* block-size: 100vh; */
-  min-block-size: 668px;
+  block-size: 100vh;
+  max-block-size: 668px;
 }
 
 .footer-title {
@@ -179,8 +178,8 @@
 .decorated-zone::before {
   content: '';
   position: absolute;
-  border-inline-end: 1px solid var(--accent-color, #ff0070);
-  border-block-start: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--f-color, #ff0070);
+  border-block-start: 1px solid var(--f-color, #ff0070);
   inset-block-start: var(--space-sm, 10px);
   inset-inline-end: var(--space-sm, 10px);
   block-size: 25px;
@@ -190,8 +189,8 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  border-inline-start: 1px solid var(--accent-color, #ff0070);
-  border-block-end: 1px solid var(--accent-color, #ff0070);
+  border-inline-start: 1px solid var(--f-color, #ff0070);
+  border-block-end: 1px solid var(--f-color, #ff0070);
   inset-block-end: var(--space-sm, 10px);
   inset-inline-start: var(--space-sm, 10px);
   block-size: 25px;
@@ -218,7 +217,7 @@
 }
 
 .title-decor {
-  color: var(--bg-color, #000028);
+  color: var(--title-decor, #000028);
   font-weight: 700;
   background-color: var(--accent-color, #ff0070);
 }
@@ -232,6 +231,7 @@
   .header,
   .footer {
     min-block-size: 1024px;
+    max-block-size: initial;
   }
 
   .decorated-zone::before {
@@ -329,7 +329,8 @@
 @media (width >= 1024px) {
   .header,
   .footer {
-    min-block-size: 768px;
+    max-block-size: 768px;
+    min-block-size: initial;
   }
 
   .header__theme-menu {

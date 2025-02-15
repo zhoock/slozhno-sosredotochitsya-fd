@@ -10,8 +10,10 @@
   --bg-image: url(../images/cover-image-dark.png);
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
-  --header__title-color: #db00ff;
+  --heading-title-color: #db00ff;
   --button-border-hover: #ff007066;
+  --title-decor: #000028;
+  --f-color: #ff0070;
 }
 
 .theme-dark .page {
@@ -20,7 +22,7 @@
   }
 
   .title-decor {
-    color: var(--bg-color, #000028);
+    color: var(--title-decor, #000028);
   }
 
   .header__theme-menu-button,
